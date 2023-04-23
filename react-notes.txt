@@ -1,0 +1,57 @@
+Section 2 - JS Refresher
+	2.1 - let & const
+			- use let for variables
+			- use const for constant values
+		- Arrow Functions
+			- no need of parenthesis if there is exactly one argument
+			- If u r returning only the return statement then, {} & return keyword is not needed
+		- Exports & Imports
+			- If using default keyword, I,ports default & ONLY export of the file, Name in the receiving file is upto user
+			- If not using default keyword, import stuff by using its name.
+			- for alias, use as keyword
+			- for importing everyting, use * operator
+		- Classes
+			- blueprint for objects
+			- to instantiate a class, use new keyword
+			- implement inheritance using extends keyword
+			- Use super keyword in derived class, to access inherited constrcutor
+		- Classes, Properties & Methods
+			- Properties are variables attached to classes/objects
+			- Methods are like functions attached to classes/objects
+			- ES7 Feature - to initialize a property, we can skip initializing it in the constructor block
+			- ES7 Feature - to define a function we can use it as arrow function
+			E.g. classMethod = () = {}
+		- Spread & Rest Operators
+			- ...
+			- Spread -> Used to spli array elements OR object properties
+			E.g. With Array -> const newArray = [...oldArray, 1, 2]
+			E.g. with Object -> const newObject = {..oldObject, newProp: 5}
+			- If old object also has newProp property, it will be overwritten
+			- Rest -> Used to merge a list of function arguments into an Array
+			E.g. function sortArgs(...args){
+					return args.sort()
+				}
+		- Destructuring
+			- Easily extract array elements or object properties & store them in variables
+
+		- Reference & Primitive type Refresher
+			- Primitive Types
+				- numbers, strings, booleans are primitive types
+				- When you create a copy of these data types, the controller actually creates a new memory location & assign that location to that variable
+			- Reference Types
+				- Arrays, Objects & Function are reference types
+				- When you define these data types, controller is storing a pointer in the variable & that pointer, points to the memory loc where object is stored, So If you create a copy with new variable, it points to the same location as well.
+				- These types creates a mutable copy of themselves
+				- To create immutable copy of these types, use spread operator
+		- Array Methods
+			- map
+				- Returns a new array, by performing some functionality on every element of the array
+Section 3 - React Basiscs & Working with Components
+	3.1 - What are components? & why is react all about them?
+			- React is a js lib, for building UI
+			- Componets are reusable building blocks, in application's UI
+		- React code is written in a declarative way
+			- React allows you to create re-usable & reactive components consisting of HTML, JS & CSS
+			- Declarative Approach - Define the desired target state(s) & let React figure out the actual JS DOM Instructions
+		- Creating a new React Project
+			- 
