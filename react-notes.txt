@@ -54,4 +54,7 @@ Section 3 - React Basiscs & Working with Components
 			- React allows you to create re-usable & reactive components consisting of HTML, JS & CSS
 			- Declarative Approach - Define the desired target state(s) & let React figure out the actual JS DOM Instructions
 		- Creating a new React Project
-			- 
+			- use npx create-react-app <app-name> to create React project
+		- Analyzing a Standard React Project
+			- First file to execute is index.js
+			- createRoot Function
