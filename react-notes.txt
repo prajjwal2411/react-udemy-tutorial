@@ -57,4 +57,6 @@ Section 3 - React Basiscs & Working with Components
 			- use npx create-react-app <app-name> to create React project
 		- Analyzing a Standard React Project
 			- First file to execute is index.js
-			- createRoot Function
+			- createRoot method creates the main entry point into the react application
+			- index.html, is the only html file that is loaded in the browser
+			- 
