@@ -59,4 +59,17 @@ Section 3 - React Basiscs & Working with Components
 			- First file to execute is index.js
 			- createRoot method creates the main entry point into the react application
 			- index.html, is the only html file that is loaded in the browser
-			- 
+		- Introduction to JSX
+			- JSX - Javascrit XML
+			- HTML code inside javascript code
+		- How React Works
+			- With vanilla JS, developer have to write code using imperative appraoch, because dev needs to instruct step by step process on how to render elements on the DOM.
+			- With React the step-by-step process is done by React Libraries
+		- Building a first custom component
+			- Good Practice: Every component has its own file
+			- Component Tree
+				- App/default component sits at the top & all the other components renders under it
+			- Good Practice: Name of the Components should be capital letter of every word with .js extension
+			- A component in react is just a special javascript function which return JSX Code
+			- Components name should be strictly have Uppercase letters, because react have a simple rule, which states that, if it starts with small case letter, it is a built-in HTML element & if it starts with upper case letter it is a custom component element.
+			- In react adjust JSX elements must be wrapped in <></> tags, because the program cannot return more than one element.
