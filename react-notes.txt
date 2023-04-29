@@ -72,4 +72,16 @@ Section 3 - React Basiscs & Working with Components
 			- Good Practice: Name of the Components should be capital letter of every word with .js extension
 			- A component in react is just a special javascript function which return JSX Code
 			- Components name should be strictly have Uppercase letters, because react have a simple rule, which states that, if it starts with small case letter, it is a built-in HTML element & if it starts with upper case letter it is a custom component element.
-			- In react adjust JSX elements must be wrapped in <></> tags, because the program cannot return more than one element.
+			- In react adjust JSX elements must be wrapped in <></>(React fragment elements) or inside a single element such as div or span tags, because the program cannot return more than one element.
+		- Writing more complex JSX code
+			- Every return statement must have only one root element
+		- Adding Basic CSS Styling
+			- use className for adding
+		- Outputting Dynamic Data & Working with Expressions in JSX
+			- To output dynamic content use curly braces
+		- Passing data via "Props"
+			- Components can't access data stored in another components
+			- Using Props we can pass data from one componet to another component, & access that element in another component
+			-  These are nothing but attributes for custom elements, similar to attributes for HTML elements
+			- In react we call them Props, which also stands for properties
+			- By using the props functionality of react, we can make custom components reusable throughout the application
