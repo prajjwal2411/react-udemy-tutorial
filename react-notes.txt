@@ -85,3 +85,21 @@ Section 3 - React Basiscs & Working with Components
 			-  These are nothing but attributes for custom elements, similar to attributes for HTML elements
 			- In react we call them Props, which also stands for properties
 			- By using the props functionality of react, we can make custom components reusable throughout the application
+		- Adding normal JS Logic to Components
+			- Godd Practice: If you want to do additional operation inside custom component, with value of props, don't put it in JSX code.
+		- Splitting Components into Multiple Components
+		- The Concept of "Composition" ("children props")
+			- Building UI, from smaller building blocks is alled composition.
+			- You can't use custom components as wrapper for other kind of content
+			- To create such wrapper components use props.children
+			- This prop is received by every custom component, even if the dev is not setting it explicitly
+			- children is reserved name & its(props.children) value will always be the content b/w opening & closing tags of your custom component
+		- Summary
+			- Understanding of components
+			- React Core Syntax & JSX
+			- Working with Data
+			- working with components
+			- Props
+			- Children property on props
+		- Closer Look at JSX
+			- 
