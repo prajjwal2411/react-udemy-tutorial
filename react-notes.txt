@@ -84,7 +84,7 @@ Section 3 - React Basiscs & Working with Components
 			- Using Props we can pass data from one componet to another component, & access that element in another component
 			-  These are nothing but attributes for custom elements, similar to attributes for HTML elements
 			- In react we call them Props, which also stands for properties
-			- By using the props functionality of react, we can make custom components reusable throughout the application
+			- By using the propFdecs functionality of react, we can make custom components reusable throughout the application
 		- Adding normal JS Logic to Components
 			- Godd Practice: If you want to do additional operation inside custom component, with value of props, don't put it in JSX code.
 		- Splitting Components into Multiple Components
@@ -102,4 +102,63 @@ Section 3 - React Basiscs & Working with Components
 			- Props
 			- Children property on props
 		- Closer Look at JSX
+		- Organising Component Files
+Section 4 - React state & working with events
+	4.1 - Module Introducton
+			- UI & States in react
+			- Handling Events
+			- Closer look at component & state
+
+		- Listening to Events & Working with Event Handlers
+			- If we are executing certain block after an event, we don't use parenthesis(we don't execute the function in HTML(JSX) code), we point to it
+			- Because if we use parenthesis, JS will execute that function, & the desired event function will run without clicking on it.
+		- How Components Functions are Executed
+			- Our React Components are nothing but JSX functions, so they will not update value on frontend what angular does
+			- We are calling those components(Functions) initially/when we want to display it, but we are not calling them again.
+			- To show the updated value on the "title" field, we need to call our react component again.
+			- So we need to tell react that something have changed, & that particular component should be re-evaluate
+		- Working with "state"
+			- The solution to our previous problem are react states
+			- How? - By using useState
+			- the useState is a predefined function in React Library, It is a react hook, all the hooks in react uses, "use" as prefix
+			- this function allows us to define values as state where changes to these values should reflect in the component function being called again
+			- IMPORTANT - We use useState inside our component function only, but their is one exception to it as well.
+			- with useState we create a special kind of variable that is going to change its state in future
+			- useState: 
+				arguments: Special variable which changes its state/value in future.
+				return: It returns an array
+					0. variable: It returns that special variable with updated value.
+					1. function: which we call to change/update the value to that variable
+						arrgument of returned function: new value that you want to set
+			- useState returns variables naming convention
+				- the variable that we are using in the JSX coed.
+				- same variable but with "set" as prefix	
+			- the first state is set by the argument that we have passed to useState hook.
+			- For setting a new value, call the function that has been returned by the useState hook, with an argument of whatever the new value you want to set, this will update the value in DOM as well.
+			- Reason for not using simple "=" operator & going for the useState hook
+			- The reason is, the whole component will be updated again with the new value
+			- If you have data, which might change, & where changes to that data should be reflectedon the UI the we need state, because regular variables will not do the trick
+			- With react state, we can set & change values, & when that state changes(set/update of data values), then only that particular react component will re-evaluate that component only
+		- A closer look at "state" hook
+			- useState registers some state, so some value as a state
+			- useState registers the state for a specific component instance
+			- Component Instance
+				- For E.g. ExpenseItem component is used 4 times, so there are 4 instances of ExpenseItem component
+				- Every instance has its own state, which is not related to rest of the instances
+				- Every time an instance is called, a new separate state is created
+				- Proof of the above line: use console.log in ExpenseItem component inside the exported function, it will execute 4 times
+				- After you change the desired value using useState hook, you will see it(console mentioned in previous point) again once because that component or component instance is re-evaluated again
+			- We are using const while array destructring because we are not assigning any new value to title variable again, also while working with useState, we tell react that it should manage some value for us, which we cannot see that variable itself
+			- Rect keeps track, where we have used useState for the first time
+			- when we call useState for first time, it will set the inital value(props.title), & after re-execution of the component, because of state change(calling of stateTitle function with latest value as an argument), React will not initialie the state, instead it will update the state & gives the new state instead(updates the new value on DOM).
+		- State can be updated in many ways
+			- with setTimeout function
+			- with response from HTTP requests
+			- etc.
+		- Adding Form Inputs
+		- Listening to User Input
+			- Similar to event property in addEventListener method in JS, we receive the event property in React after using any onEventMethod
 			- 
+
+
+
