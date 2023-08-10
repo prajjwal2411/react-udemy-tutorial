@@ -23,7 +23,7 @@ Section 2 - JS Refresher
 			E.g. classMethod = () = {}
 		- Spread & Rest Operators
 			- ...
-			- Spread -> Used to spli array elements OR object properties
+			- Spread -> Used to split array elements OR object properties
 			E.g. With Array -> const newArray = [...oldArray, 1, 2]
 			E.g. with Object -> const newObject = {..oldObject, newProp: 5}
 			- If old object also has newProp property, it will be overwritten
@@ -158,6 +158,15 @@ Section 4 - React state & working with events
 		- Adding Form Inputs
 		- Listening to User Input
 			- Similar to event property in addEventListener method in JS, we receive the event property in React after using any onEventMethod
+		- Working with multiple States
+			- We can have more than one states in a component that are updating different values(it is not a bad practice in react)
+		- Using One state instead(and what's better)
+			- When updating the values using one state, make sure you are updating all the values because, react will not merge the changes  it simply replaces old changes
+			with the new one
+		- Updating State that depend on the previous State
+			- React schedules state updates, if there are multiple state updates are happening in the application, then incorrect state value/snapshot might get updated, therefore
+			use the anonymous function for updating the new state
+			- It is a safer way to get the latest updated snapshots of the state.
 			- 
 
 
