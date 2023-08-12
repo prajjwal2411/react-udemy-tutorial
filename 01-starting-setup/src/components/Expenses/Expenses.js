@@ -8,21 +8,27 @@ import ExpensesFilter from "./ExpenseFilter";
 
 export default function Expenses(props) {
 
-  const [enteredYearState, setEnteredYear] = useState('')
+  const [enteredYearState, setEnteredYear] = useState('2020');
+  // const [filteredInfoText, setFilterInfoText] = useState('2019, 2021 & 2022');
+
+  // Example of derived state
+  // let filteredInfoText = '2019, 2021 & 2022';
   
-  const yearChangeHandler = (enteredYear) => {
-    setEnteredYear(enteredYear);
-  }
-  
+  // if(enteredYearState === '2019'){
+  //   filteredInfoText = '2020, 2021 & 2022';
+  // } else if(enteredYearState === '2021'){
+  //   filteredInfoText = '2020, 2019 & 2022';
+  // } else {
+  //   filteredInfoText = '2020, 2021 & 2019';
+  // }
   const saveYearFilterDataHandler = (enteredYear) => {
-    yearChangeHandler(enteredYear);
+    setEnteredYear(enteredYear);
   }
 
   return (
     <>
-      <p>{enteredYearState}</p>
       <Card className="expenses">
-        <ExpensesFilter onSaveYearFilterData={saveYearFilterDataHandler}/>
+        <ExpensesFilter selectedYear={enteredYearState} onSaveYearFilterData={saveYearFilterDataHandler}/>
         <ExpenseItem
           title={props.items[0].title}
           amount={props.items[0].amount}
