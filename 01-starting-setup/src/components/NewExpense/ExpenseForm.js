@@ -50,8 +50,9 @@ export default function ExpenseForm(props) {
         setEnteredDate('');
     }
 
-    return <form onSubmit={submitHandler}>
-        <div className="new-expense__controls">
+    return <>
+    <form onSubmit={submitHandler}>
+    <div className="new-expense__controls">
             <div className="new-expense__control">
                 <label>Title</label>
                 <input type="text" value={enteredTitle} onChange={titleChangeHandler}/>
@@ -67,7 +68,9 @@ export default function ExpenseForm(props) {
             </div>
         </div>
         <div className="new-expense__actions">
+            <button type="button" onClick={props.onCancel}>Cancel</button>
             <button type="submit">Add Expense</button>
         </div>
     </form>
+    </>
 }
